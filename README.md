@@ -28,12 +28,12 @@ pip3 instal mpp-solar # Not needed because this repo uses it as a submodule
 ## Clone GIT & submodules on Venus OS:
 
 ```
-git clone --recurse-submodules https://github.com/DarkZeros/dbus-mppsolar /data/etc/dbus-mppsolar
+git clone --recurse-submodules https://github.com/DarkZeros/dbus-mppsolar /data/apps/dbus-mppsolar
 ```
 
 Now install the service to the VenusOS to allow starting it when needed:
 ```
-cp -R /data/etc/dbus-mppsolar/service /opt/victronenergy/service-templates/dbus-mppsolar
+cp -R /data/apps/dbus-mppsolar/service /opt/victronenergy/service-templates/dbus-mppsolar
 ```
 
 Add the service to the starter rules, this will autostart the service on new USB-Serial connections with any compatible inverter. Modify `/etc/venus/serial-starter.conf` add a new service in the list of services, and add it to the default list of service handlers at the start (`mppsolar:gps:...:vedirect`).

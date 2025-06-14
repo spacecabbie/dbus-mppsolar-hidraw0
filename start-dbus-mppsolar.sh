@@ -1,15 +1,13 @@
 #!/bin/bash
-#
-# Start script for gps_dbus
-#   First parameter: tty device to use
-#
-# Keep this script running with daemon tools. If it exits because the
-# connection crashes, or whatever, daemon tools will start a new one.
-#
+
+# remove comment for easier troubleshooting
+#set -x
 
 . /opt/victronenergy/serial-starter/run-service.sh
 
-app=/data/etc/dbus-mppsolar/dbus-mppsolar.py
+# app=$(dirname $0)/dbus-mppsolar.py
 
-# Baudrates to use
-start -b 2400 -s /dev/$tty
+# start -x -s $tty
+app="/data/apps/dbus-mppsolar/dbus-mppsolar.py"
+args="/dev/$tty"
+start $args

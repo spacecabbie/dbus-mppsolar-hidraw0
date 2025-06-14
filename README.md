@@ -28,7 +28,8 @@ pip3 instal mpp-solar # Not needed because this repo uses it as a submodule
 ## Clone GIT & submodules on Venus OS:
 
 ```
-git clone --recurse-submodules https://github.com/DarkZeros/dbus-mppsolar /data/apps/dbus-mppsolar
+git clone --recurse-submodules https://github.com/spacecabbie/dbus-mppsolar-hidraw0 /data/apps/dbus-mppsolar
+
 ```
 
 Now install the service to the VenusOS to allow starting it when needed:
